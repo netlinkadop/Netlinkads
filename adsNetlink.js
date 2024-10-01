@@ -595,7 +595,7 @@ function MultipleSizeScroll(_marginTop) {
   });
 }
 
-function NetlinkAdxFirstView(_adUnit, _adSize) {
+function NetlinkAdxFirstView(_adUnit, _adSize = [[320, 480], [480, 320]]) {
   checkGPTExists();
 
   var gpt_id = randomID();
