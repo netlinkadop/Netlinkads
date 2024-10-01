@@ -1,0 +1,15 @@
+.ad:before {
+    display: block;
+    content: 'Advertisement';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    line-height: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    top: -13px;
+    left: 0;
+    color: #b2bed5;
+    text-align: center;
+    font-family: Arial,sans-serif
+}
