@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       observer.observe(slot);
     });
   });
-  
+
 //_insertPosition = 0: beforeend, _insertPosition = 1: afterbegin, _insertPosition = 2: beforebegin, _insertPosition = 3: afterend
 function NetlinkAdx(
   _adUnit,
@@ -595,7 +595,7 @@ function MultipleSizeScroll(_marginTop) {
   });
 }
 
-function NetlinkAdxFirstView(_adUnit, _adSize = [300, 600]) {
+function NetlinkAdxFirstView(_adUnit, _adSize) {
   checkGPTExists();
 
   var gpt_id = randomID();
