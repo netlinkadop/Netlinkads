@@ -595,14 +595,16 @@ function MultipleSizeScroll(_marginTop) {
   });
 }
 
-function NetlinkAdxFirstView(_adUnit, _adSize = [[320, 480], [480, 320]]) {
+function NetlinkAdxFirstView(_adUnit, _adSize = [300, 600]) {
+  if (window.innerWidth >= 768) return;
+
   checkGPTExists();
 
   var gpt_id = randomID();
 
   window.googletag = window.googletag || { cmd: [] };
   googletag.cmd.push(function () {
-    googletag
+    firstViewAdSlot = googletag
       .defineSlot(_adUnit, _adSize, gpt_id)
       .addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
@@ -643,6 +645,7 @@ function NetlinkAdxFirstView(_adUnit, _adSize = [[320, 480], [480, 320]]) {
       clearInterval(interval);
     }
   }, 1000);
+  return (firstViewAdSlot);
 }
 
 function NetlinkAdxRewarded(_adUnit) {
